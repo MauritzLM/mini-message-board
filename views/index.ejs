@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+
+  <h2>
+    Messages:
+  </h2>
+  <% for (let i=0; i < messages.length; i++) { %>
+    <p>
+      <%= `comment: ${messages[i].text} - user: ${messages[i].user} - date: ${messages.added}` %>
+    </p>
+    <% } %>
+
+      <a href="http://localhost:3000/new">new messages</a>
+</body>
+
 </html>
